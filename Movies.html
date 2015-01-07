@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Temperatures</title>
+<script>
+function showTemp(){
+	var tempByHour = [59.2,60.1,63,65,62];
+	for(var i = 0; i < 5; i++){
+		var theTemp = tempByHour[i];
+		var id = "temp"+i;
+		var xx = document.getElementById(id);
+		if(i==0){
+			xx.innerHTML = "The temperature at noon was "+theTemp
+			}else{
+				xx.innerHTML = "The temperature at "+ i +"was " + theTemp;
+				}
+		}
+	}
+	window.onload = showTemp; 
+</script>
+</head>
+
+<body>
+<h1>Temperatures</h1>
+<ul>
+<li id="temp0"></li>
+<li id="temp1"></li>
+<li id="temp2"></li>
+<li id="temp3"></li>
+<li id="temp4"></li>
+</ul>
+</body>
+</html>
